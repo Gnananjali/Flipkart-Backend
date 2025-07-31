@@ -49,4 +49,4 @@ function authenticateJWT(req,res,next){
     }
 }
 
-modul.export={router,authenticateJWT};
+module.export={router,authenticateJWT};
