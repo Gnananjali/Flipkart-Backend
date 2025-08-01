@@ -12,7 +12,7 @@ app.use("/api", cartRoutes); // ✅ Use routes after app is defined
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb+srv://gnananjalikavali123:60sXil0Ftj9GpbdN@cluster0.iwh3sr9.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=Cluster0")
+  .connect("mongodb+srv://gnananjalikavali123:60sXil0Ftj9GpbdN@cluster0.iwh3sr9.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=Project0")
 
 .then(() => {
     console.log("Connected to MongoDB");
