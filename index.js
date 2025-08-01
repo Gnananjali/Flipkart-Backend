@@ -4,6 +4,12 @@ const cors=require('cors');
 const bodyParser=require("body-parser");
 
 const app=express();
+const Product = mongoose.model("Product", new mongoose.Schema({
+  name: String,
+  description: String,
+  price: Number,
+  image: String // optional field for image URL
+}));
 app.use(cors());
 app.use(bodyParser.json());
 
