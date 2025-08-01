@@ -24,7 +24,7 @@ router.post("/auth/signup",async(req,res)=>{
 router.post("/auth/login",async(req,res)=>{
     const {email,password}=req.body;
     const user=await User.findOne({email});
-    if(user && await bcrypt.compare(password,user.password)){
+    if(user && await bcryptjs.compare(password,user.password)){
         const token=jwt.sign({userId:user._id},'secret',{expiresIn:'1h'});
         res.status(200).json({token});
     } else {
