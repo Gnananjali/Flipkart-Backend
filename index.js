@@ -17,7 +17,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 //const {router:authRoutes,authenticateJWT}=require("./auth");
-const cartRoutes=require("./cart");
+//const cartRoutes=require("./cart");
 
 app.use(authRoutes);
 app.use(cartRoutes);
