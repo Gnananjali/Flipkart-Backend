@@ -13,7 +13,7 @@ router.post("/auth/signup",async(req,res)=>{
     if(existingUser){
         return res.status(400).json({error:"User already exist"});
     }
-    const hashPassword=await bcrypt.hash(password, 10);
+    const hashPassword=await bcryptjs.hash(password, 10);
     const user=new User({email,password:hashPassword});
     await user.save();
     const token=jwt.sign({userId:user._id},'secret',{expiresIn:'1h'});
@@ -49,4 +49,4 @@ function authenticateJWT(req,res,next){
     }
 }
 
-module.export={router,authenticateJWT};
+module.exports={router,authenticateJWT};
