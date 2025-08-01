@@ -66,6 +66,15 @@ router.get('/cart',async(req,res)=>{
     }
 });
 
+router.get('/products', (req, res) => {
+    const sampleProducts = [
+        { id: 1, name: "Phone", price: 19999 },
+        { id: 2, name: "Laptop", price: 49999 },
+        { id: 3, name: "Earbuds", price: 2999 }
+    ];
+    res.status(200).json({ success: true, products: sampleProducts });
+});
+
 module.exports = router;
 
 //Delete route-assignment
