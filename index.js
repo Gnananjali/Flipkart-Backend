@@ -3,6 +3,9 @@ const mongoose=require('mongoose');
 const cors=require('cors');
 const bodyParser=require("body-parser");
 
+const { router: authRoutes, authenticateJWT } = require("./auth");
+const cartRoutes = require("./cart");
+
 const app=express();
 const Product = mongoose.model("Product", new mongoose.Schema({
   name: String,
@@ -13,7 +16,7 @@ const Product = mongoose.model("Product", new mongoose.Schema({
 app.use(cors());
 app.use(bodyParser.json());
 
-const {router:authRoutes,authenticateJWT}=require("./auth");
+//const {router:authRoutes,authenticateJWT}=require("./auth");
 const cartRoutes=require("./cart");
 
 app.use(authRoutes);
