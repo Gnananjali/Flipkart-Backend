@@ -11,7 +11,7 @@ app.use(express.json());
 app.use("/api", cartRoutes); // ✅ Use routes after app is defined
 
 // Connect to MongoDB
-mongoose.connect("your-mongodb-url", {
+mongoose.connect("mongodb+srv://gnananjalikavali123:60sXil0Ftj9GpbdN@cluster0.iwh3sr9.mongodb.net/ecommerce", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
