@@ -38,7 +38,7 @@ router.post('/cart/add',async(req,res)=>{
             quantity:parseInt(quantity)
         });
     }
-    cart.updateAt=new Date();
+    cart.updatedAt=new Date();
     await cart.save();
         res.status(200).json({ success: true, message: "Item added to cart", cart });
     }catch (err) {
@@ -65,6 +65,8 @@ router.get('/cart',async(req,res)=>{
         });
     }
 });
+
+module.exports = router;
 
 //Delete route-assignment
 
