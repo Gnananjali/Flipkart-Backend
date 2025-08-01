@@ -5,6 +5,7 @@ const bodyParser=require("body-parser");
 
 const { router: authRoutes, authenticateJWT } = require("./auth");
 const cartRoutes = require("./cart");
+app.use("/api",cartRoutes);
 
 const app=express();
 const Product = mongoose.model("Product", new mongoose.Schema({
