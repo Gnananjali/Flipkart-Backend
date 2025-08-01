@@ -8,7 +8,7 @@ const app = express(); // ✅ app must be initialized before using it
 // Middlewares
 app.use(cors());
 app.use(express.json());
-app.use("/api", cartRoutes); // ✅ Use routes after app is defined
+app.use("/", cartRoutes); // ✅ Use routes after app is defined
 
 // Connect to MongoDB
 mongoose
